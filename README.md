@@ -32,7 +32,7 @@ This logger can send messages to logger server to write them to db.
 ### Local installation
 
 
-`npm install anoda-logger`
+`npm install anoda_logger`
 
 Import files to your main.ts file.
 
