@@ -1,4 +1,4 @@
-export const Config = {
+export const AnodaConfig = {
     env:       undefined,
     appName:   undefined,
     loggerUri: undefined,
