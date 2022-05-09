@@ -1,10 +1,10 @@
 import { Request, Response, NextFunction } from 'express';
 import { Injectable, NestMiddleware } from '@nestjs/common';
-import { PinoLoggerService } from './pino-logger.service';
+import { AnodaLogger } from './anoda-logger';
 
 @Injectable()
 export class LoggerMiddleware implements NestMiddleware {
-    private logger = new PinoLoggerService();
+    private logger = new AnodaLogger();
 
     use (request: Request, response: Response, next: NextFunction): void {
         const { ip, method, originalUrl } = request;

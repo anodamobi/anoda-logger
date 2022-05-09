@@ -4,7 +4,7 @@ import { asyncLocalStorage } from './async-storage';
 import axios from 'axios';
 import { LogObj } from './interfaces';
 import { setTimeout } from 'node:timers';
-import { Config } from './logger-config';
+import { AnodaConfig } from './logger-config';
 
 
 const pino = pinoLogger({
@@ -12,7 +12,7 @@ const pino = pinoLogger({
 });
 
 
-export class PinoLoggerService  implements LoggerService {
+export class AnodaLogger implements LoggerService {
     private logData: LogObj[];
     private isRunning: boolean;
     private env: string;
@@ -24,10 +24,10 @@ export class PinoLoggerService  implements LoggerService {
     constructor () {
         this.logData = [];
         this.isRunning = false;
-        this.env = Config.env;
-        this.appName = Config.appName;
-        this.loggerUri = Config.loggerUri;
-        this.loggerKey = Config.loggerKey;
+        this.env = AnodaConfig.env;
+        this.appName = AnodaConfig.appName;
+        this.loggerUri = AnodaConfig.loggerUri;
+        this.loggerKey = AnodaConfig.loggerKey;
     }
 
     private getMessage (message: any, context?: string, traceId = 'System message') {

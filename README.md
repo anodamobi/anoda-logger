@@ -9,7 +9,7 @@
 <br />
 <div align="center">
 
-<h3 align="center">anoda_logger</h3>
+<h3 align="center">anoda-logger</h3>
 </div>
 
 
@@ -35,34 +35,26 @@ Simple logger module for NestJS that allows you to stream logs from many environ
 
 Import files to your main.ts file.
 
-```import { Config, PinoLoggerService, asyncLocalStorage } from 'anoda_logger';```
+```import { AnodaMiddleware, AnodaConfig, AnodaLogger } from 'anoda-logger';```
 
 Set up your main.ts.
 
 ```
-Config.init({
+AnodaConfig.init({
         env:       //Your enviroment,
         appName:   //Your app name,
         loggerUri: // Uri for your logger server,
         loggerKey: // Logger access key,
     });
 
-    app.useLogger(new PinoLoggerService());
-
-    app.use((req, res, next) => {
-        const traceId = req.headers['x-request-id'] || randomUUID();
-
-        // req.headers['sentry-trace'] = traceId;
-        const store = new Map().set('traceId', traceId);
-        asyncLocalStorage.run(store, () => {
-            next();
-        });
-    });
+    app.useLogger(new AnodaLogger());
+    app.use(AnodaMiddleware);
+    
 ```
 
 Import LoggerMiddleware to app.module.ts.
 
-```import { LoggerMiddleware } from 'anoda_logger';```
+```import { LoggerMiddleware } from 'anoda-logger';```
 
 Set up LoggerMiddleware.
 
