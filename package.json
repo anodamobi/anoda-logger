@@ -1,7 +1,7 @@
 {
   "name": "anoda-logger",
   "version": "1.0.3",
-  "description": "Simple logger module for NestJS that allows you to stream logs from many different environments and projects to one server.",
+  "description": "Stream logs from multiple projects to a single server",
   "main": "dist/index",
   "types": "dist/index",
   "repository": {

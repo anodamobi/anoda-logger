@@ -16,8 +16,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This is npm package which installs anoda_logger to your NestJS App. 
-This logger can send messages to logger server to write them to db.
+Simple logger module for NestJS that allows you to stream logs from many environments and projects to one server.
 
 ### Built With
 
