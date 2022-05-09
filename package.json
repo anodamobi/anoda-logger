@@ -1,5 +1,5 @@
 {
-  "name": "anoda_logger",
+  "name": "anoda-logger",
   "version": "1.0.3",
   "description": "logger for nestjs",
   "main": "dist/index",
