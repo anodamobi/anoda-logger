@@ -2,7 +2,7 @@
 <br />
 <div align="center">
   <a href="">
-    <img src="https://drive.google.com/uc?id=1SseYQru59okRfI5F7ImJdClfjK5CIB56" width="150px" alt="">
+    <img src="https://drive.google.com/uc?export=view&id=1d5ggFl97Cyh806YF_NQX1Z7wevXODDoj" width="150px" alt="">
   </a>
 </div>
 
@@ -31,7 +31,7 @@ Simple logger module for NestJS that allows you to stream logs from many environ
 ### Local installation
 
 
-`npm install anoda_logger`
+`npm install anoda-logger`
 
 Import files to your main.ts file.
 

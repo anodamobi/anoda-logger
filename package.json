@@ -1,6 +1,6 @@
 {
   "name": "anoda-logger",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Stream logs from multiple projects to a single server",
   "main": "dist/index",
   "types": "dist/index",
